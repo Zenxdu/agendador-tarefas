@@ -12,15 +12,11 @@ import java.util.List;
 public interface TarefasConverter {
 
 
-    @Mapping(source = "id", target = "id")
-    @Mapping(source = "dataEvento", target = "dataEvento")
-    @Mapping(source = "dataCriacao", target ="dataCriacao")
+
     // O MapStruct irá mapear automaticamente os campos com nomes e tipos iguais
     TarefasEntity paraTarefaEntity(TarefasDTO dto);
 
-    @Mapping(source = "id", target = "id")
-    @Mapping(source = "dataEvento", target = "dataEvento")
-    @Mapping(source = "dataCriacao", target ="dataCriacao")
+
     TarefasDTO paraTarefaDTO(TarefasEntity entity);
 
     // Para listas, o MapStruct também consegue mapear automaticamente os objetos dentro da lista
